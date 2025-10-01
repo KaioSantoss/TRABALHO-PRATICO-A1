@@ -39,6 +39,7 @@ exports.atualizar = (req, res) => {
 
   // Se não encontrar, retorna 404
   if (!produto) return res.status(404).json({ erro: 'Produto não encontrado' });
+  
 
   const { nome, preco, estoque } = req.body;
 

@@ -12,6 +12,14 @@ app.use(express.json());
 const produtosRoutes = require('./SRC/Routes/produtos');
 app.use('/api/v1/produtos', produtosRoutes);
 
+// Importa e registra as rotas de categorias
+const categoriasRoutes = require('./SRC/Routes/categorias');
+app.use('/api/v1/categorias', categoriasRoutes);
+
+// Importa e registra as rotas de clientes
+const clientesRoutes = require('./SRC/Routes/clientes');
+app.use('/api/v1/clientes', clientesRoutes);
+
 // Rota raiz apenas para teste se a API está funcionando
 app.get('/', (req, res) => res.send('API Loja de Joias Funcionando!'));
 
