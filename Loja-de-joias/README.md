@@ -145,6 +145,7 @@ Exemplo resposta 201 Created
 
 Equipe
 Nome	GitHub	Contribuição
+
 Jamylle Cesario	github.com/jamyllecesario	Implementação CRUD Categorias, CRUD clientes e README
 
 Kaio Daniel	github.com/KaioSantoss	Configuração Inicial, CRUD Produtos e Validação básica de campos obrigatórios (ex: retornar 400 Bad Request se campo obrigatório estiver faltando).
