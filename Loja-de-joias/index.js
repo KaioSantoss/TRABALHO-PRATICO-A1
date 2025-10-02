@@ -20,6 +20,14 @@ app.use('/api/v1/categorias', categoriasRoutes);
 const clientesRoutes = require('./SRC/Routes/clientes');
 app.use('/api/v1/clientes', clientesRoutes);
 
+// Importa e registra as rotas de fornecedores
+const fornecedoresRoutes = require('./SRC/Routes/fornecedores');
+app.use('/api/v1/fornecedores', fornecedoresRoutes);
+
+// Importa e registra as rotas de pedidos
+const pedidosRoutes = require('./SRC/Routes/pedidos');
+app.use('/api/v1/pedidos', pedidosRoutes);
+
 // Rota raiz apenas para teste se a API está funcionando
 app.get('/', (req, res) => res.send('API Loja de Joias Funcionando!'));
 
