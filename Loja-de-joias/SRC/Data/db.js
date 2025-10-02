@@ -64,23 +64,74 @@ module.exports = {
     },
     {
       id: 3,
-      nome: "Miguel costa",
+      nome: "Miguel Costa",
       email: "miguel.costa@example.com",
       telefone: "(31) 98765-4321",
       criadoEm: new Date().toISOString()
     }
   ],
 
-  // Listas vazias para pedidos e fornecedores
-  pedidos: [],
-  fornecedores: [],
+  // Lista de fornecedores iniciais
+  fornecedores: [
+    {
+      id: 1,
+      nome: "Joias Premium Ltda",
+      email: "contato@joiaspremium.com",
+      telefone: "(11) 3456-7890",
+      endereco: "Rua das Pedras, 123 - São Paulo/SP",
+      criadoEm: new Date().toISOString()
+    },
+    {
+      id: 2,
+      nome: "Luxo Importações",
+      email: "vendas@luxoimport.com",
+      telefone: "(21) 3344-5566",
+      endereco: "Av. Central, 456 - Rio de Janeiro/RJ",
+      criadoEm: new Date().toISOString()
+    }
+  ],
+
+  // Lista de pedidos iniciais
+  pedidos: [
+    {
+      id: 1,
+      clienteId: 1,
+      fornecedorId: 2,
+      itens: [
+        { produtoId: 1, quantidade: 1, preco: 1500 },
+        { produtoId: 2, quantidade: 2, preco: 500 }
+      ],
+      valorTotal: 2500,
+      criadoEm: new Date().toISOString()
+    },
+    {
+      id: 2,
+      clienteId: 2,
+      fornecedorId: 1,
+      itens: [
+        { produtoId: 3, quantidade: 1, preco: 5400 }
+      ],
+      valorTotal: 5400,
+      criadoEm: new Date().toISOString()
+    },
+    {
+      id: 3,
+      clienteId: 3,
+      fornecedorId: 1,
+      itens: [
+        { produtoId: 2, quantidade: 3, preco: 500 }
+      ],
+      valorTotal: 1500,
+      criadoEm: new Date().toISOString()
+    }
+  ],
 
   // Contadores para gerar IDs automáticos
   counters: {
     produtos: 4,      // próximo id será 4
     categorias: 4,    // próximo id será 4
     clientes: 4,      // próximo id será 4
-    pedidos: 1,
-    fornecedores: 1
+    fornecedores: 3,  // já temos 2
+    pedidos: 4        // já temos 3
   }
 };
